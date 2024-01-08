@@ -19,6 +19,10 @@ export default function TextForm(props) {
     let newtext = "";
     settext(newtext);
   }
+  const handleCopy = ()=>{
+   navigator.clipboard.writeText(text);  
+  }
+  
   const [text, settext] = useState('Enter text here');
   return (
     <>
@@ -30,6 +34,9 @@ export default function TextForm(props) {
     <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
     <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
     <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear</button>
+    <button className="btn btn-primary mx-2" onClick={handleCopy}>CopyText</button>
+    
+    
     </div>
     <div className='container my-2'>
       <h1>Your text summery</h1>
