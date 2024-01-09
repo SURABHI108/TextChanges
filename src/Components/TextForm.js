@@ -22,7 +22,6 @@ export default function TextForm(props) {
   const handleCopy = ()=>{
    navigator.clipboard.writeText(text);  
   }
-  
   const [text, settext] = useState('Enter text here');
   return (
     <>
